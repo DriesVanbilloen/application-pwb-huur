@@ -8,6 +8,6 @@ public class ClientDataController {
 
     @RequestMapping("/")
     public String index() {
-        return "Pwb data controller";
+        return "New controller";
     }
 }
