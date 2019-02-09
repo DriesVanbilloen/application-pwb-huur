@@ -6,19 +6,11 @@ matrix:
     - language: java
       jdk: oraclejdk8
       sudo: true
+      dist: trusty
       before_install:
         - chmod +x mvnw
 
-    - language: node_js
-      node_js: stable
-      install:
-        - npm install
-      before_install:
-        - cd ./frontend/
-      script:
-        - npm run build
-
-deploy:
-  provider: heroku
-  api_key:
-    secure:
+#deploy:
+#  provider: heroku
+#  api_key:
+#    secure:
