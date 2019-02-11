@@ -6,8 +6,7 @@ import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
-@ComponentScan("com.vanbilloen.pbwhuuraanvraag.databases")
-@ComponentScan("com.vanbilloen.pbwhuuraanvraag.model")
+@ComponentScan(value = {"com.vanbilloen.pbwhuuraanvraag.databases", "com.vanbilloen.pbwhuuraanvraag.model", "com.vanbilloen.pbwhuuraanvraag.services"})
 @SpringBootApplication
 public class PwbHuurApplication {
 

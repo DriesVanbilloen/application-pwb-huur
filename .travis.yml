@@ -13,6 +13,6 @@ matrix:
 deploy:
   provider: heroku
   api_key:
-    secure: 479753d1-9055-4afa-9198-ddc28927a510
+    secure: 33de8244-52f8-49f5-bfb6-4e4482f3ed18
   app:
     application-pwb-huur
