@@ -2,19 +2,17 @@ package com.vanbilloen.pbwhuuraanvraag.services;
 
 import com.vanbilloen.pbwhuuraanvraag.databases.ClientDatabase;
 import com.vanbilloen.pbwhuuraanvraag.model.Client;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Component
+@Service
 public class ClientService {
 
-    @Autowired
-    private ClientDatabase clientDatabase;
+    private final ClientDatabase clientDatabase;
 
-    public ClientService() {
-
+    public ClientService(ClientDatabase clientDatabase) {
+        this.clientDatabase = clientDatabase;
     }
 
     public List<Client> getAllClient() {
