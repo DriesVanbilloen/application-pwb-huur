@@ -13,7 +13,7 @@ import javax.validation.constraints.NotNull;
 import java.util.List;
 
 @RestController
-@RequestMapping("/client")
+@RequestMapping("/api/client")
 public class ClientDataController {
 
     private final ClientService clientService;
@@ -27,10 +27,16 @@ public class ClientDataController {
         return getResponseEntity(clientService.addClient(client), HttpStatus.CREATED);
     }
 
-    @RequestMapping(method = RequestMethod.GET, value = "/all")
+    @RequestMapping(value = "/all" ,method = RequestMethod.GET)
     public List<Client> getAllClients() {
         return clientService.getAllClient();
     }
+
+    @RequestMapping(value = "/test", method = RequestMethod.GET)
+    public String controllerTest() {
+        return "test";
+    }
+
     private ResponseEntity<Client> getResponseEntity(Client client, HttpStatus status) {
         return new ResponseEntity<>(client, status);
     }
